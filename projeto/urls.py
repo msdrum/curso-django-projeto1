@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
 
 
 # HTTP REQUEST (Esta função está neste documento apenas para título de estudo)
 def my_view(request):
-    ...
+
     # return HTTP response
+    return HttpResponse('Request retornada com sucesso!')
 
 
 urlpatterns = [
