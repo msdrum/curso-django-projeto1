@@ -17,21 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-
-
-# HTTP REQUEST (Esta função está neste documento apenas para título de estudo)
-def my_view(request):
-
-    # return HTTP response
-    return HttpResponse('Request retornada com sucesso!')
-
-
-def home(request):
-    return HttpResponse('HOME')
+from recipes.views import home
+from recipes.views import contato
+from recipes.views import sobre
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', my_view),
-    path('', home)
+    path('', home),
+    path('sobre/', sobre),
+    path('contato/', contato)
 ]
