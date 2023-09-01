@@ -26,7 +26,12 @@ def my_view(request):
     return HttpResponse('Request retornada com sucesso!')
 
 
+def home(request):
+    return HttpResponse('HOME')
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', my_view)
+    path('sobre/', my_view),
+    path('', home)
 ]
