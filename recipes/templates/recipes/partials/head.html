@@ -18,6 +18,10 @@
         integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+
     <title>Recipes</title>
 
 
@@ -80,16 +84,42 @@
 
         body {
             font-size: 1.6rem;
+            font-family: var(--font-primary);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-headings);
         }
 
         .main-header-container {
-            background: #13141f;
+            background: var(--color-primary-dark);
         }
 
         .container {
             max-width: 144rem;
-            background: red;
             margin: 0 auto;
+            padding: var(--spacing-gutter-medium);
+        }
+
+        .main-logo {
+            font-size: 4rem;
+            color: var(--color-white);
+            text-decoration: none;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .main-logo-icon {
+            margin-right: 2rem;
         }
     </style>
 
