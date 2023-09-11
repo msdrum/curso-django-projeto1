@@ -4,6 +4,7 @@ from recipes import views
 
 urlpatterns = [
     path('', views.home),
-    path('recipes/<id>', views.recipe),
+    # O comando <int:id> indica para o Django receber apenas Ids que sejam números inteiros.
+    path('recipes/<int:id>/', views.recipe),
 
 ]
